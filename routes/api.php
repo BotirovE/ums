@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Resources\PostsCollection;
+use App\Http\Resources\ServicesCollection;
+use App\Post;
+use App\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +19,14 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('/posts', function()
+{
+    return new PostsCollection(Post::paginate());
+});
+
+Route::get('/services', function()
+{
+    return new ServicesCollection(Service::paginate());
 });
