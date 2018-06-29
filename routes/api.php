@@ -1,26 +1,20 @@
 <?php
 
 use Illuminate\Http\Request;
+
 use App\Http\Resources\NewsCollection;
 use App\Http\Resources\ServicesCollection;
 use App\Http\Resources\CommunicationsCollection;
-use App\Http\Resources\InternetsCollection;
-<<<<<<< HEAD
 use App\Http\Resources\TarifsCollection;
-=======
-use App\Http\Resources\BeautifulNumbersCollection;
->>>>>>> 93363d5142cf321ff173d9222e03a80b217a2481
+use App\Http\Resources\BeutifulNumbersCollection;
 
 
 use App\News;
 use App\Service;
 use App\Communication;
 use App\Internet;
-<<<<<<< HEAD
 use App\Tarif;
-=======
 use App\BeautifulNumber;
->>>>>>> 93363d5142cf321ff173d9222e03a80b217a2481
 
 /*
 |--------------------------------------------------------------------------
@@ -58,13 +52,11 @@ Route::get('/internets', function()
     return new InternetsCollection(Internet::paginate(10));
 });
 
-<<<<<<< HEAD
 Route::get('/tarifs', function()
 {
     return new TarifsCollection(Tarif::paginate());
-=======
+});
 Route::get('/beautiful-numbers', function()
 {
-    return new BeautifulNumbersCollection(BeautifulNumber::paginate(10));
->>>>>>> 93363d5142cf321ff173d9222e03a80b217a2481
+    return new BeutifulNumbersCollection(BeautifulNumber::paginate(10));
 });
