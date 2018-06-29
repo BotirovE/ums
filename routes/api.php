@@ -5,12 +5,14 @@ use App\Http\Resources\NewsCollection;
 use App\Http\Resources\ServicesCollection;
 use App\Http\Resources\CommunicationsCollection;
 use App\Http\Resources\InternetsCollection;
+use App\Http\Resources\TarifsCollection;
 
 
 use App\News;
 use App\Service;
 use App\Communication;
 use App\Internet;
+use App\Tarif;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,4 +48,9 @@ Route::get('/communications', function()
 Route::get('/internets', function()
 {
     return new InternetsCollection(Internet::paginate());
+});
+
+Route::get('/tarifs', function()
+{
+    return new TarifsCollection(Tarif::paginate());
 });
