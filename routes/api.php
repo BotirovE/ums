@@ -1,10 +1,16 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Http\Resources\PostsCollection;
+use App\Http\Resources\NewsCollection;
 use App\Http\Resources\ServicesCollection;
-use App\Post;
+use App\Http\Resources\CommunicationsCollection;
+use App\Http\Resources\InternetsCollection;
+
+
+use App\News;
 use App\Service;
+use App\Communication;
+use App\Internet;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +27,23 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/posts', function()
+Route::get('/news', function()
 {
-    return new PostsCollection(Post::paginate());
+    return new NewsCollection(News::paginate());
 });
 
 Route::get('/services', function()
 {
     return new ServicesCollection(Service::paginate());
+});
+
+
+Route::get('/communications', function()
+{
+    return new CommunicationsCollection(Communication::paginate());
+});
+
+Route::get('/internets', function()
+{
+    return new InternetsCollection(Internet::paginate());
 });
