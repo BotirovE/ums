@@ -31,7 +31,7 @@ What things you need to install the software and how to install them
 
 5. Create admin `php artisan voyager:admin your@email.com --create` and you will be prompted for the users name and password.
 
-## Running the tests
+## Running
 
 1. Open project folder in command line
 
