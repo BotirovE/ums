@@ -44,5 +44,5 @@ What things you need to install the software and how to install them
 
 ## Authors
 
-See the list of [contributors](https://github.com/ums/graphs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/BotirovE/ums/graphs/contributors) who participated in this project.
 
